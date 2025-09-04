@@ -11,8 +11,6 @@
     (Optional) Filename and path of the file to backup the sessions to.
 .EXAMPLE
     Export-RDMDatasourceSessions -DataSourceName "MyRdmDatasource" -BackupPwd "Sup3rS3cureP@ssw0rd" -BackupPath "C:\temp\RdmBkup.rdm"
-.PARAMETER Latest
-    Get only the latest release
 #>
 
 #Requires -Version 7.2  
