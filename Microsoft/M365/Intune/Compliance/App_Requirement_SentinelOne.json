@@ -1,0 +1,46 @@
+{
+   "Rules":[
+       { 
+         "SettingName":"SentinelOne Agent is installed",
+         "Operator":"IsEquals",
+         "DataType": "Boolean",
+         "Operand":true,
+         "MoreInfoUrl":"https://compliance.company.com/compliance-policy/",
+         "RemediationStrings":[ 
+            {
+               "Language": "en_US",
+               "Title": "SentinelOne Agent not installed",
+               "Description": "The SentinelOne Agent service is not installed on this system. Please contact your IT support."
+            }
+         ]
+      },
+      { 
+         "SettingName":"SentinelOne Agent is running",
+         "Operator":"IsEquals",
+         "DataType": "Boolean",
+         "Operand":true,
+         "MoreInfoUrl":"https://compliance.company.com/compliance-policy/",
+         "RemediationStrings":[ 
+            {
+               "Language": "en_US",
+               "Title": "SentinelOne Agent not running",
+               "Description": "The SentinelOne Agent service is not running on this system. Please contact your IT support."
+            }
+         ]
+      },
+      { 
+         "SettingName":"SentinelOne Agent is starting automatically",
+         "Operator":"IsEquals",
+         "DataType": "Boolean",
+         "Operand":true,
+         "MoreInfoUrl":"https://compliance.company.com/compliance-policy/",
+         "RemediationStrings":[ 
+            {
+               "Language": "en_US",
+               "Title": "SentinelOne Agent not starting automatically",
+               "Description": "The SentinelOne Agent service is not configured to start automatically at system start on this system. Please contact your IT support."
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,23 @@
+{
+   "Rules":[ 
+      {
+         "SettingName": "Admin count",
+         "Operator": "IsEquals",
+         "DataType": "Int64",
+         "Operand": "0",
+         "MoreInfoUrl": "https://compliance.company.com/compliance-policy/",
+         "RemediationStrings": [
+               {
+                  "Language": "en_US",
+                  "Title": "Invalid count of administrators",
+                  "Description": "There are unauthorized members in the local Administrators group on this system (Count: {ActualValue}). Please contact your IT support."
+               },
+               {
+                  "Language": "de_DE",
+                  "Title": "Unzulässige Anzahl an Administratoren",
+                  "Description": "Die lokale Adminstrator Gruppe hat unzulässige Mitglieder auf diesem System (Anzahl: {ActualValue}). Bitte kontaktieren Sie Ihren IT-Support."
+               }
+         ]
+      }
+   ]
+}
