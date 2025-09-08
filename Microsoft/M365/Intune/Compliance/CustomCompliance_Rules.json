@@ -1,0 +1,118 @@
+{
+   "Rules":[ 
+      {
+         "SettingName": "Admin count",
+         "Operator": "IsEquals",
+         "DataType": "Int64",
+         "Operand": "0",
+         "MoreInfoUrl": "https://www.uplink.systems/compliance-policy/",
+         "RemediationStrings": [
+               {
+                  "Language": "en_US",
+                  "Title": "Invalid count of administrators",
+                  "Description": "There are unauthorized members in the local Administrators group on this system (Count: {ActualValue}). Please contact your IT support."
+               },
+               {
+                  "Language": "de_DE",
+                  "Title": "Unzulässige Anzahl an Administratoren",
+                  "Description": "Die lokale Adminstrator Gruppe hat unzulässige Mitglieder auf diesem System (Anzahl: {ActualValue}). Bitte kontaktieren Sie Ihren IT-Support."
+               }
+         ]
+      },
+      {
+         "SettingName": "Certificate is present",
+         "Operator":"IsEquals",
+         "DataType":"Boolean",
+         "Operand":true,
+         "MoreInfoURL":"https://www.uplink.systems/compliance-policy/",
+         "RemediationStrings": [
+             {
+                 "Language": "en_US",
+                 "Title": "Certificate is missing",
+                 "Description": "The organisation's CA certificate is not present. Please contact your IT support."
+             },
+             {
+               "Language": "de_DE",
+               "Title": "Zertifikat fehlt",
+               "Description": "Das CA Zertifikat der Organisation ist nicht vorhanden. Bitte kontaktieren Sie Ihren IT-Support."
+           }
+         ]
+      },
+      {
+         "SettingName": "Computername is valid",
+         "Operator":"IsEquals",
+         "DataType":"Boolean",
+         "Operand":true,
+         "MoreInfoURL":"https://www.uplink.systems/compliance-policy/",
+         "RemediationStrings": [
+             {
+                 "Language": "en_US",
+                 "Title": "Computername is invalid",
+                 "Description": "Your computer's name does not match the organisation's naming convention. Please contact your IT support."
+             },
+             {
+               "Language": "de_DE",
+               "Title": "Computername ist ungültig",
+               "Description": "Der Computername entspricht nicht der Namenskonvention der Organisation. Bitte kontaktieren Sie Ihren IT-Support."
+           }
+         ]
+      },
+      { 
+         "SettingName":"Credential Guard is enabled",
+         "Operator":"IsEquals",
+         "DataType":"String",
+         "Operand":"Enabled",
+         "MoreInfoUrl":"https://www.uplink.systems/compliance-policy/",
+         "RemediationStrings":[ 
+           { 
+             "Language":"en_US",
+             "Title":"Credential Guard is not enabled",
+             "Description":"Credential Guard is not enabled. Please contact your IT support."
+           },
+           { 
+             "Language":"de_DE",
+             "Title":"Credential Guard ist nicht aktiviert",
+             "Description":"Credential Guard ist nicht aktiviert. Bitte kontaktieren Sie Ihren IT-Support."
+           }
+         ]
+      },
+      { 
+         "SettingName":"Free disk space",
+         "Operator":"GreaterEquals",
+         "DataType":"int64",
+         "Operand":10,
+         "MoreInfoUrl":"https://www.uplink.systems/compliance-policy/",
+         "RemediationStrings":[ 
+            { 
+               "Language":"en_US",
+               "Title":"Insufficient disk space",
+               "Description":"Less than 10 GB disk space is available on the system drive. Please cleanup the disk space or contact your IT support."
+             },
+             { 
+               "Language":"de_DE",
+               "Title":"Unzureichender Festplattenspeicher",
+               "Description":"Auf dem Systemlaufwerk sind weniger als 10 GB Festplattenspeicher verfügbar. Bitte bereinigen Sie den Festplattenspeicher oder kontaktieren Sie Ihren IT-Support."
+             }
+         ]
+      },
+      { 
+         "SettingName":"LAPS is enabled",
+         "Operator":"IsEquals",
+         "DataType":"Boolean",
+         "Operand":true,
+         "MoreInfoUrl":"https://www.uplink.systems/compliance-policy/",
+         "RemediationStrings":[ 
+            { 
+               "Language":"en_US",
+               "Title":"LAPS is not enabled",
+               "Description":"Local Admin Password Solution is not enabled. Please contact your IT support."
+             },
+             { 
+               "Language":"de_DE",
+               "Title":"LAPS ist nicht aktiviert",
+               "Description":"Local Admin Password Solution ist nicht aktiviert. Bitte kontaktieren Sie Ihren IT-Support."
+             }
+         ]
+      }
+   ]
+}
