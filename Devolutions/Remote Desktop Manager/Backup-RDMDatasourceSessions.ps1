@@ -27,9 +27,9 @@ Param(
 $ErrorActionPreference = 'SilentlyContinue'
 
 # Check if RDM PS module is installed; install, if not...
-If(-not (Get-Module Devolutions.PowerShell -ListAvailable)){
+if(-not (Get-Module Devolutions.PowerShell -ListAvailable)){
     Install-Module -Name "Devolutions.PowerShell" -Scope CurrentUser -Force
-} Else {
+} else {
     Update-Module -Name "Devolutions.Powershell" -Scope CurrentUser -Force
 }
 
