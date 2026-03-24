@@ -60,7 +60,7 @@ else {
   exit 1
 }
 
-Connect-IPPSSession
+Connect-IPPSSession -ShowBanner:$false
 
 Write-Host -Object "`nFound $($Labels.Count) sensitivity labels to configure:" -ForegroundColor DarkGray
 Start-Sleep -Seconds 1
@@ -101,6 +101,6 @@ foreach ($Label in $Labels) {
   }
 }
 
-Disconnect-IPPSSession
+Disconnect-ExchangeOnline -Confirm:$false
 
 exit $Error.Count
