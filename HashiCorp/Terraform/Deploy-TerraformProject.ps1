@@ -63,20 +63,20 @@ begin {
 	function Enter-TerraformDeployment {
 		Write-Host -Object "`nEnter new or existing Terraform project deployment..." -ForegroundColor DarkGray
 		Start-Sleep -Seconds 2
-		Try {
+		try {
 			Import-Module -Name $TerraformPsModule -Force -ErrorAction Stop
 			Write-Host -Object "Importing UplinkSystems.Terraform module for PowerShell... " -ForegroundColor DarkGray -NoNewline
 			Write-Host -Object "Success..." -ForegroundColor Green
 			Start-Sleep -Seconds 2
 		}
-		Catch [System.IO.DirectoryNotFoundException],[System.IO.FileNotFoundException] {
+		catch [System.IO.DirectoryNotFoundException],[System.IO.FileNotFoundException] {
 			Write-Host -Object "`nImporting UplinkSystems.Terraform module for PowerShell... " -ForegroundColor DarkGray -NoNewline
 			Write-Host -Object "Failed... " -ForegroundColor Red -NoNewline
 			Write-Host -Object "Module not found...." -ForegroundColor White
 			Start-Sleep -Seconds 2
 			Exit-TerraformDeployment
 		}
-		Catch {
+		catch {
 			Write-Host -Object "`nImporting UplinkSystems.Terraform module for PowerShell... " -ForegroundColor DarkGray -NoNewline
 			Write-Host -Object "Failed... " -ForegroundColor Red -NoNewline
 			Start-Sleep -Seconds 2

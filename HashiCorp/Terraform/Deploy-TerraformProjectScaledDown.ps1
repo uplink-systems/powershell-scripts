@@ -63,10 +63,10 @@ begin {
 		Write-Host -Object "`n`nEnter Terraform project deployment...`n" -ForegroundColor DarkGray
 		Start-Sleep -Seconds 1
 		Write-Host -Object "`nImporting UplinkSystems.Terraform module for PowerShell... " -ForegroundColor DarkGray -NoNewline
-		Try {
+		try {
 			Import-Module -Name $TerraformPsModule -Force -ErrorAction Stop
 		}
-		Catch {
+		catch {
 			Write-Host -Object "Failed...`n" -ForegroundColor Red -NoNewline
 			Start-Sleep -Seconds 1
 			Exit-TerraformDeployment
